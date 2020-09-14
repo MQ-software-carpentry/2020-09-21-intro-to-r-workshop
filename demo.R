@@ -2,8 +2,7 @@
 # A very quick demonstation of the sorts of things your can do with R
 #
 
-# ... and a couple of built-in demos
-demo(graphics)
+
 
 # Load the GGPLOT2 library
 library(ggplot2)
@@ -12,4 +11,9 @@ library(ggplot2)
 View(diamonds)
 
 # Generate a Plot 
-ggplot(diamonds) + geom_point(aes(x=carat, y=price, color=cut)) + geom_smooth(aes(x=carat, y=price))
+ggplot(diamonds) + 
+  geom_point(aes(x=carat, y=price, color=cut)) + 
+  geom_smooth(aes(x=carat, y=price))
+
+# ... and a couple of built-in demos
+demo(graphics)
