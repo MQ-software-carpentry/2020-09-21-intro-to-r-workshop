@@ -4,6 +4,8 @@
 
 # Heres a change so we can save it to Git
 
+# and this is attributed to the right person
+
 # Load the GGPLOT2 library
 library(ggplot2)
 
