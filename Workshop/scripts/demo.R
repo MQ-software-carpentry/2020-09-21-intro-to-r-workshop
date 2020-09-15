@@ -2,6 +2,7 @@
 # A very quick demonstation of the sorts of things your can do with R
 #
 
+# Heres a change so we can save it to Git
 
 # Load the GGPLOT2 library
 library(ggplot2)
