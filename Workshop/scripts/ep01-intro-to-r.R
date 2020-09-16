@@ -31,7 +31,9 @@
 # Solution:
 
 
-# Try the equations in the file "images/equations.png"
+# Try the equations:
+
+file.show("images/equations.png")
 
 # Solution:
 
@@ -43,9 +45,9 @@ a <- 3              # assign the number 3 to OBJECT (variable) called "a"
 b <- 5              # assign 5 to b
 
 a                   # so what's the value of OBJECT "a"
-b                   # .. and what's b
+b                   # ... and what's b
 
-a + b               # we can add them together
+a + b               # we can add them together just like numbers
 
 # --------
 # Exercise
@@ -65,13 +67,10 @@ a + b               # we can add them together
 
 
 
-
-
 # Logical operators
 #
 # == != < > >= <= !
-
-
+1 < 124
 
 #
 # Sensible object names are sensible ...
@@ -88,17 +87,17 @@ nouns_are_good <- TRUE
 TRUE <- 17
 ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 
-# --------
+# 
 # Exercise
-# --------
+# 
 #
-# Assign the code of this unit to a object with a good name.
+# Assign the name of this workshop to a object with a good name.
 #
-# Solution: [Hint:       <- "CBMS836"]
+# Solution: [Hint:       <- "Introduction to R"]
 
-# Assign the name of this room to an object
+# Assign the name of video conferencing tool we are using to an object
 #
-# Solution: [Hint:      <- "14SCO130"]
+# Solution: [Hint:      <- "Zoom"]
 
 
 # Which of these are valid object names:
@@ -117,31 +116,29 @@ ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 #
 
 weight_lb <- 55    # doesn't print anything
-(weight_lb <- 55)  # but putting parenthesis around the call prints the value of `genome_size_mb`
+(weight_lb <- 55)  # but putting parenthesis () around and expression makes it display
 weight_lb          # and so does typing the name of the object
 
-# There a 2 and a bit pounds in a kilogram 
+# There are 2 and a bit pounds in a kilogram 
 2.20462 * weight_lb
 
 weight_lb <- 57.5
 2.20462 * weight_lb
 
 weight_kg <- 2.20462 * weight_lb
-weight_kg <- 100
+weight_kg
 
-
-
-# --------
+# 
 # Exercise
-# --------
+# 
 # 
 # What are the values after each statement in the following?
 # 
-# mass <- 47.5            # mass?
-# age  <- 122             # age?
-# mass <- mass * 2.0      # mass?
-# age  <- age - 20        # age?
-# mass_index <- mass/age  # mass_index?
+# mass <- 47.5            # mass is: 
+# age  <- 122             # age is:
+# mass <- mass * 2.0      # mass is:
+# age  <- age - 20        # age is:
+# mass_index <- mass/age  # mass_index is: 
 #
 # How do we do we know if our answers are correct ? 
 # [Hint: <highlight> [ALT][ENTER]
@@ -151,13 +148,14 @@ weight_kg <- 100
 #
 
 # Comments (like this one) are usually helpful
-# they can also be indented
-#
-# They should be supportive (not redundant)
 
-# --------
+     # they can also be indented
+
+# They should be supportive (not redundant - like "this is a comment")
+
+# 
 # Exercise
-# --------
+# 
 #
 # Comment the following lines of code
 
@@ -175,12 +173,14 @@ abs(-23.3)
 round(3.14159)
 pi
 
+# Getting help about particular functions 
 ?round
 args(round)
 
 round(3.14159, digits = 2)
 round(digits = 2, x = 3.14159)
 
+#
 # Exercise
 #
 # what does the function called log10() do ?  Can you test it ?
@@ -188,19 +188,22 @@ round(digits = 2, x = 3.14159)
 # Answer:
 
 
-# --------
+# 
 # Exercise
-# --------
+# 
 #
 # We’re going to work with some genome lengths (measured in megabases).
 #
-# 1. Create object genome_length_mb and assign it the value 4.6 (E.cloi)
+# 1. Create object genome_length_mb and assign it the value 4.6 
+#
+# (E.cloi - happens to have approx 4.6 million base pairs in it's genome)
 #
 # Solution:
 
 
 # 2. Convert this length, to the weight of the genome in picograms.
-#    Use the conversion: 978Mb = 1picogram.
+#
+#    Use the conversion: 1 mega base = 0.001022 picograms
 #
 # Solution:
 
@@ -248,28 +251,35 @@ str(glengths)
 str(species)
 
 lengths <- c(glengths, 90)        # adding at the end
-lengths <- c(30, glengths)        # adding at the beginning
+lengths <- c(30, glengths)        # adding at the start
 lengths
 
-# note all the elements have to be the same type (coercion or casting)
+# note all the elements have to be the same type
 length_species <- c(4.5, "ecoli")
 length_species
+
+# This automatic conversion is called 'coercion' or 'casting' ..
 
 # and there are other types as well ...
 sqrt_of_minus_one <- 1i
 true_or_false_value <- TRUE
+decimal_number = 54.0
 whole_number = -54L
+
 
 class(sqrt_of_minus_one)
 class(true_or_false_value)
 class(whole_number)
+class(decimal_number)
 
 # --------
 # Exercise
 # --------
 #
-# We’ve seen that atomic vectors can be of type character, 
-# numeric (or double), integer, and logical. But what happens if we try to mix these types in a single vector?
+# We’ve seen that vectors can be of type character, 
+# numeric (or double), integer, and logical. 
+#
+# But what happens if we try to mix these types in a single vector?
 #
 # eg:
 #
@@ -291,7 +301,7 @@ class(whole_number)
 # --------
 # Exercise
 # --------
-# How many values in combined_logical are "TRUE" (as a character)
+# How many values in combined_logical are "TRUE" (ie character 4 characters)
 # in the following example:
 #   
 #   num_logical <- c(1, 2, 3, TRUE)
@@ -327,7 +337,11 @@ animals[animals %in% c("rat", "cat", "dog", "duck", "goat")]
 
 # Challenge
 #
-# Can you figure out why "four" > "five" returns TRUE?
+# Can you explain  why 
+#
+#  "four" > "five" 
+#
+# returns TRUE?
 #
 # Answer:
 
@@ -344,18 +358,22 @@ heights[!is.na(heights)]
 na.omit(heights)
 heights[complete.cases(heights)]
 
-# --------
-# Exercise
-# --------
+#
+# Exercise (extended)
+#
 #
 # Using this vector of heights in inches, create a new vector 
 # with the NAs removed.
 # 
 #   heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
-# 
-# Use the function median() to calculate the median of the heights vector.
+#
+# Solution
 
+# Use the function median() to calculate the median of the heights vector.
+#
+# Solution
 
 # Use R to figure out how many people in the set are taller than 67 inches.
 #
-# [Hint: remove the NA's first]
+# [Hint: R has a builtin function called length() that tells you 
+# how many values are in a vector
