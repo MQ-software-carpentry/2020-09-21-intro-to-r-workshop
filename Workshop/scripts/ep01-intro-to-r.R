@@ -8,7 +8,7 @@
 
 #
 # Topic: Basic Calculations and using Objects
-#
+# Presented by: Belinda Fabian
 
 # R can do sums ...
 3 + 5
@@ -21,19 +21,13 @@
 # 
 # Excercises
 #
-# Calculate 10 plus 2 all divided by 3 and then squared
-#
-# Solution:
-
 
 # What does: 11 + 1 / 6  evaluate to ?
 
 # Solution:
 
 
-# Try the equations:
-
-file.show("images/equations.png")
+# Calculate 10 plus 2 all divided by 3 and then squared
 
 # Solution:
 
@@ -79,10 +73,7 @@ date_of_birth <- 7
 z <- 19.5
 THEMOL <- 42
 camelCaseIsGenerallyNotRecommended <- "Unless you follow Google's Style guide"
-some <- 123
-thing <- 20
-some-thing
-names_that_are_unreasonably_long_are_not_a_good_idea <- TRUE
+names_that_are_unreasonably_long_are_not_a_good_idea <- "correct"
 nouns_are_good <- TRUE
 TRUE <- 17
 ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
@@ -100,7 +91,7 @@ ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 # Solution: [Hint:      <- "Zoom"]
 
 
-# Which of these are valid object names:
+# Which of these are valid object names: [Hint: Try them out]
 #
 #  min_height
 #  max.height
@@ -151,13 +142,13 @@ weight_kg
 
      # they can also be indented
 
-# They should be supportive (not redundant - like "this is a comment")
+# They should be supportive (not redundant e.g. "this is a comment")
 
 # 
 # Exercise
 # 
 #
-# Comment the following lines of code
+# Add explanatory comments to the following lines of code
 
 ft <- 3
 in <- ft * 12
@@ -188,46 +179,10 @@ round(digits = 2, x = 3.14159)
 # Answer:
 
 
-# 
-# Exercise
-# 
-#
-# We’re going to work with some genome lengths (measured in megabases).
-#
-# 1. Create object genome_length_mb and assign it the value 4.6 
-#
-# (E.cloi - happens to have approx 4.6 million base pairs in it's genome)
-#
-# Solution:
-
-
-# 2. Convert this length, to the weight of the genome in picograms.
-#
-#    Use the conversion: 1 mega base = 0.001022 picograms
-#
-# Solution:
-
-
-# 3. If the human genome is approx 3,300 megabases - approx how heavy is it.
-#
-# Solution:
-
-
-# 4. Store the calculated weight in an object called: genome_weight_pg
-#
-# Solution:
-
-
-# 5. If we change genome_length_mb to another value (say 2,800 - eg a mouse)
-#    does the value value of genome_weight_pg get dated ?
-#
-# Answer:
-
-
 
 #
 # Topic: Vectors and Data Types
-#
+# Presented by: Richard Miller
 
 # Combine some values in a vector
 glengths <- c(4.6, 3000, 50000)
