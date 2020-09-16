@@ -263,9 +263,11 @@ class(decimal_number)
 #   char_logical <- c("a", "b", "c", TRUE)
 #   combined_logical <- c(num_logical, char_logical)
 
+
 #
 # Topic: Subsetting vectors
-#
+# Presented by: Evan Matthews
+
 animals <- c("mouse", "rat", "dog", "cat")
 animals[2]
 animals[c(3, 2)]
