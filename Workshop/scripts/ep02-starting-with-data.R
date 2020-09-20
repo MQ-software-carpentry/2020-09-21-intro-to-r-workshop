@@ -60,7 +60,7 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 
 
 # 
-# Topic: Subetting
+# Topic: Sub-setting
 #
 
 # first element in the first column of the data frame (as a vector)
@@ -73,6 +73,7 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 
 
 # first column of the data frame (as a data frame)
+
 
 # first row (as a data frame)
 
@@ -94,11 +95,11 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 
 
 #
-# Challange: Using slicing, see if you can produce the same result as:
+# Challenge: Using slicing, see if you can produce the same result as:
 #
 #   tail(surveys)
 #
-# i.e., print just last 6 rows of survey
+# i.e., print just last 6 rows of the surveys dataframe
 #
 # Solution:
 
@@ -113,7 +114,7 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 
 
 #
-# Topic: Factors (for categorial data)
+# Topic: Factors (for categorical data)
 #
 
 
@@ -123,31 +124,35 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 # Converting factors
 
 
-# can be tricky if the levels are  numbers
+# can be tricky if the levels are numbers
 
 
-# so does our survey data have factor
+# so does our survey data have any factors
 
 
-
+#
 # Topic:  Dealing with Dates
+#
 
-# There's a whole library for dealing with dates ..
+# R has a whole library for dealing with dates ...
 
 
 
 # R can concatenated things together using paste()
 
 
-# sep indicates the character to use to separate each component
+# 'sep' indicates the character to use to separate each component
 
 
-# it also works for entire columns
+# paste() also works for entire columns
 
 
-# let's save the dates in a new column of our dataframesurveys$date 
+# let's save the dates in a new column of our dataframe surveys$date 
 
 
 # and ask summary() to summarise 
+
+
+# but what about the "Warning: 129 failed to parse"
 
 
