@@ -9,6 +9,8 @@
 #
 # Based on: https://datacarpentry.org/R-ecology-lesson/02-starting-with-data.html
 
+
+
 # Lets download some data (make sure the data folder exists)
 download.file(url = "https://ndownloader.figshare.com/files/2292169",
               destfile = "data_raw/portal_data_joined.csv")
@@ -174,4 +176,34 @@ str(survey)
 
 
 # Topic:  Dealing with Dates
+
+# There's a whole library for dealing with dates ..
+library("lubridate")
+
+
+my_date <- ymd("2015-01-01")
+str(my_date)
+
+# R can concatenated things together using paste()
+paste("2015", "1", "1", sep = "-")
+
+# sep indicates the character to use to separate each component
+my_date <- ymd(paste("2015", "1", "1", sep = "-")) 
+str(my_date)
+
+# it also works for entire columns
+paste(surveys$year, surveys$month, surveys$day, sep = "-")
+
+ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+
+# let's save the dates in a new column of our dataframesurveys$date 
+surveys$date <- ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+surveys$date <- ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+
+# and in summary 
+summary(surveys$date)
+
+missing_dates <- surveys[is.na(surveys$date), c("year", "month", "day")]
+
+head(missing_dates)
 
